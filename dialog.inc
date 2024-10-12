@@ -145,9 +145,9 @@ stock bool:Dialog_Open(playerid, const func[], const DIALOG_STYLE:style, const c
 
     // Format
     if(YSI_CheckNumargs__(7))
-        return ShowPlayerDialog(playerid, DEFAULT_DIALOG_ID, style, caption, info, button1, button2);
+        return ShowPlayerDialog(playerid, DEFAULT_DIALOG_ID, style, caption, body, button1, button2);
 
-    format(YSI_UNSAFE_HUGE_STRING, YSI_UNSAFE_HUGE_LENGTH, info, va_start<7>);
+    format(YSI_UNSAFE_HUGE_STRING, YSI_UNSAFE_HUGE_LENGTH, body, va_start<7>);
 	return ShowPlayerDialog(playerid, DEFAULT_DIALOG_ID, style, caption, YSI_UNSAFE_HUGE_STRING, button1, button2);
 }
 
